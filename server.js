@@ -8,9 +8,10 @@ const functions = {
   uniqueCount: (...args) => {
     return new Set(args).size;
   },
-  ksmallest: (k, ...args) => {
-    args.sort();
-    return args.sort()[parseInt(k) - 1];
+  ksmallest: (k,...args) => {
+    console.log(k);
+    return [parseInt(k)-args.sort() ];
+    
   },
   pickRandom: (...args) => {
     return args[Math.floor(Math.random() * args.length)];
